@@ -1,0 +1,26 @@
+digraph Summary {
+  // Module: /tmp/matmul-3666c2.o
+  subgraph cluster_0 {
+    style = filled;
+    color = lightgrey;
+    label = "matmul-3666c2.o";
+    node [style=filled,fillcolor=lightblue];
+    M0_6176223450499942068 [shape="Mrecord",label="__daisy_priv_matmul__str|extern}"]; // variable, constant, dsoLocal, definition, preserved
+    M0_15665353970260777610 [shape="Mrecord",label="llvm.used|appending}"]; // variable, definition
+    M0_15822663052811949562 [shape="record",label="main|extern (inst: 101, ffl: 0000101000)}"]; // function, dsoLocal, definition, preserved
+    // Edges:
+    M0_15665353970260777610 -> M0_6176223450499942068 [style=dashed]; // ref
+    M0_15665353970260777610 -> M0_15822663052811949562 [style=dashed]; // ref
+    M0_15822663052811949562 -> M0_6176223450499942068 [style=dashed]; // ref
+  }
+  // Cross-module edges:
+  7206085285791387956 [label="rand"]; // defined externally
+  M0_15665353970260777610 -> 7206085285791387956 [style=dashed]; // ref
+  7383291119112528047 [label="printf"]; // defined externally
+  M0_15665353970260777610 -> 7383291119112528047 [style=dashed]; // ref
+  1377009889143723207 [label="putchar"]; // defined externally
+  M0_15665353970260777610 -> 1377009889143723207 [style=dashed]; // ref
+  M0_15822663052811949562 -> 7206085285791387956 // call (hotness : Unknown)
+  M0_15822663052811949562 -> 7383291119112528047 // call (hotness : Unknown)
+  M0_15822663052811949562 -> 1377009889143723207 // call (hotness : Unknown)
+}

@@ -1,0 +1,6 @@
+/tmp/matmul-3666c2.o
+-r=/tmp/matmul-3666c2.o,main,plx
+-r=/tmp/matmul-3666c2.o,rand,
+-r=/tmp/matmul-3666c2.o,printf,
+-r=/tmp/matmul-3666c2.o,putchar,
+-r=/tmp/matmul-3666c2.o,__daisy_priv_matmul__str,pl
